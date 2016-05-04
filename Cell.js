@@ -39,14 +39,14 @@ function Cell(row, column, size) {
         var y = this.getY();
         noStroke();
         if (this.current) {
-            fill(0, 255, 0);
+            fill(100, 255, 120);
             rect(x, y, this.getSize(), this.getSize());
         } else if (this.visited) {
-            fill(255, 0, 0);
+            fill(bgr);
             rect(x, y, this.getSize(), this.getSize());
         }
         // walls
-        stroke(255);
+        stroke(0);
         if (this.walls[WALL_TOP])
             line(x, y, x + this.getSize(), y);
         if (this.walls[WALL_BOTTOM])

@@ -3,6 +3,7 @@ var current;
 var unvisited;
 var stack = [];
 var end = false;
+var bgr;
 
 
 var rowsAndCols = 40;
@@ -10,6 +11,7 @@ var rowsAndCols = 40;
 function setup() {
     createCanvas(800, 800);
     // setFrameRate(120);
+    bgr = color(random(50, 255), random(50, 255), random(50, 255));
     grid = new CellGrid(rowsAndCols, rowsAndCols, width / rowsAndCols);
     current = grid.get(0, 0);
     unvisited = grid.getTotalCells();
