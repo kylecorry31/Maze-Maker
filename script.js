@@ -46,7 +46,7 @@ function draw() {
         }
     } else {
         if (!end) {
-            setTimeout(window.location.reload(5000));
+            setTimeout(window.location.reload, 5000);
             end = true;
         }
     }
