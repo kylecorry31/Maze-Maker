@@ -1,7 +1,7 @@
 function CellGrid(rows, columns, gridWidth) {
     this.grid = [];
     this.columns = columns;
-    this.row = row;
+    this.rows = rows;
     this.gridWidth = gridWidth;
 
     for (var i = 0; i < rows; i++) {
