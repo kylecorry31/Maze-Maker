@@ -1,7 +1,9 @@
-var WALL_TOP = 0,
-    WALL_BOTTOM = 1,
-    WALL_LEFT = 2,
-    WALL_RIGHT = 3;
+var Wall = {
+  TOP: 0,
+  BOTTOM: 1,
+  LEFT: 2,
+  RIGHT: 3
+};
 
 function Cell(row, column, size) {
     this.size = size;
@@ -49,12 +51,12 @@ Cell.prototype.draw = function() {
     }
     // walls
     stroke(0);
-    if (this.walls[WALL_TOP])
+    if (this.walls[Wall.TOP])
         line(x, y, x + this.getSize(), y);
-    if (this.walls[WALL_BOTTOM])
+    if (this.walls[Wall.BOTTOM])
         line(x, y + this.getSize(), x + this.getSize(), y + this.getSize());
-    if (this.walls[WALL_LEFT])
+    if (this.walls[Wall.LEFT])
         line(x, y, x, y + this.getSize());
-    if (this.walls[WALL_RIGHT])
+    if (this.walls[Wall.RIGHT])
         line(x + this.getSize(), y, x + this.getSize(), y + this.getSize());
 };

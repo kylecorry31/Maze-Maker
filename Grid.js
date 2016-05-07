@@ -27,7 +27,7 @@ CellGrid.prototype.get = function(row, column) {
 };
 
 CellGrid.prototype.set = function(row, column, value) {
-    this.grid[column + row * this.numRows()] = value;
+    this.grid[column + row * this.numColumns()] = value;
 };
 
 CellGrid.prototype.getTotalCells = function() {

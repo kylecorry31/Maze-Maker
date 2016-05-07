@@ -60,19 +60,19 @@ function removeWall(a, b) {
     var drow = a.getRow() - b.getRow();
     var dcol = a.getCol() - b.getCol();
     if (drow === 1) {
-        a.setWall(WALL_TOP, false);
-        b.setWall(WALL_BOTTOM, false);
+        a.setWall(Wall.TOP, false);
+        b.setWall(Wall.BOTTOM, false);
     } else if (drow === -1) {
-        a.setWall(WALL_BOTTOM, false);
-        b.setWall(WALL_TOP, false);
+        a.setWall(Wall.BOTTOM, false);
+        b.setWall(Wall.TOP, false);
     }
 
     if (dcol === 1) {
-        a.setWall(WALL_LEFT, false);
-        b.setWall(WALL_RIGHT, false);
+        a.setWall(Wall.LEFT, false);
+        b.setWall(Wall.RIGHT, false);
     } else if (dcol === -1) {
-        a.setWall(WALL_RIGHT, false);
-        b.setWall(WALL_LEFT, false);
+        a.setWall(Wall.RIGHT, false);
+        b.setWall(Wall.LEFT, false);
     }
 }
 
